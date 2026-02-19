@@ -1,0 +1,46 @@
+!SESSION 2026-02-17 15:59:06.950 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-17 15:59:11.896
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.ui.ide 4 4 2026-02-17 15:59:27.574
+!MESSAGE Failed to read host name.
+
+!ENTRY org.eclipse.ui.ide 4 4 2026-02-17 15:59:27.574
+!MESSAGE Failed to read host name.
+!STACK 0
+java.net.UnknownHostException: artixlinux: artixlinux: Name or service not known
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1936)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.getHostName(IDEApplication.java:528)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.writeWsLockInfo(IDEApplication.java:469)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.checkInstanceLocation(IDEApplication.java:360)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:175)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1387)
+Caused by: java.net.UnknownHostException: artixlinux: Name or service not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1931)
+	... 15 more
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-17 15:59:28.162
+!MESSAGE Logback config file: /home/seth/git/cis3970work/thurmanlabw05/src/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
